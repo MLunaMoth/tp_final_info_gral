@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | Mundo Ghibli</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- TIPOGRAFÍAS -->
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Kodchasan:wght@300;400;500;600;700&family=M+PLUS+1p:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="img/totoro.png" class="brand-totoro" alt="Totoro">
+            <span class="ms-2 watercolor">Mundo Ghibli</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarGhibli"
+                aria-controls="navbarGhibli"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- ⬇⬇⬇ ESTE DIV AHORA ESTÁ EN EL LUGAR CORRECTO ⬇⬇⬇ -->
+        <div class="collapse navbar-collapse" id="navbarGhibli">
+            <ul class="navbar-nav ms-auto">
+
+                <!-- Historia & Fundadores -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Historia & Fundadores</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Orígenes del estudio</a></li>
+                        <li><a class="dropdown-item" href="#">Perfiles de los creadores</a></li>
+                    </ul>
+                </li>
+
+                <!-- Filosofía & Estilo -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Filosofía & Estilo</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Temas recurrentes</a></li>
+                        <li><a class="dropdown-item" href="#">Técnicas de animación</a></li>
+                    </ul>
+                </li>
+
+                <!-- Cine & Personajes -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Cine & Personajes</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Catálogo de películas</a></li>
+                        <li><a class="dropdown-item" href="#">Fichas completas</a></li>
+                    </ul>
+                </li>
+
+                <!-- Recomendaciones & Guías -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Recomendaciones & Guías</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Por estado de ánimo</a></li>
+                        <li><a class="dropdown-item" href="#">Por temática</a></li>
+                    </ul>
+                </li>
+
+                <!-- Análisis & Contexto -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Análisis & Contexto</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Mensajes sociales</a></li>
+                        <li><a class="dropdown-item" href="#">Legado cultural</a></li>
+                    </ul>
+                </li>
+
+                <!-- Detrás de Escena -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Detrás de Escena</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Producción de películas</a></li>
+                        <li><a class="dropdown-item" href="#">Procesos del equipo</a></li>
+                    </ul>
+                </li>
+
+                <!-- Galería -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Galería de personajes</a>
+                </li>
+
+                <!-- Juego -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Juego Interactivo</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+   
+
+<!-- HERO -->
+<section class="hero d-flex align-items-center">
+    <img src="img/personaje.png" class="leaf leaf-1">
+    <img src="img/personaje2.png" class="leaf leaf-2">
+    <img src="img/personaje3.jpg" class="leaf leaf-3">
+
+    <div class="container text-center hero-content">
+        <h1 class="hero-title">Bienvenido al Mundo Ghibli</h1>
+        <p class="mt-3 fs-5">Un espacio para explorar historias, mundos y personajes llenos de magia y sensibilidad.</p>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h2>Nuestro Universo</h2>
+        <p>Un lugar donde la imaginación, la calma y el arte se encuentran.</p>
+    </div>
+</section>
+
+<!-- TARJETAS PRINCIPALES -->
+<section class="container pb-5">
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card-custom text-center">
+                <h3>Historia & Fundadores</h3>
+                <p>Los orígenes y la visión de los creadores del estudio.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card-custom text-center">
+                <h3>Filosofía & Estilo</h3>
+                <p>La estética y los valores que dan vida a cada película.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card-custom text-center">
+                <h3>Cine & Personajes</h3>
+                <p>Mundos inolvidables y protagonistas icónicos.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PAISAJE ANIMADO -->
+<div class="landscape mt-5">
+    
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-5 footer-bg">
+    <ul class="footer-links">
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Sobre el Autor</a></li>
+    </ul>
+    <p>© 2025 Mundo Ghibli — Todos los derechos reservados</p>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+/* =========================
+   PALETA OSCURA ELEGANTE
+   =========================
+   Fondo general: #1a1623
+   Violeta profundo: #2b094b
+   Violeta suave: #4c2a72
+   Acentos beige: #e5d8c8
+========================= */
+
+/* TIPOGRAFÍAS Y ESTILO GLOBAL */
+h2, h3 {
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #e5d8c8;
+}
+
+.navbar-nav .nav-link,
+h4, h5, p {
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #e5d8c8;
+}
+
+body {
+    font-family: 'Kodchasan', sans-serif;
+    color: #e5d8c8;
+        background:
+        linear-gradient(
+            to bottom,
+            #1a1623 0%,
+            #281dcc 100%
+        );
+
+    background-color: #1a1623;
+    background-repeat: no-repeat;
+    background-size: 100% 300px, cover;
+    background-position: top, center;
+}
+
+.watercolor, h1 {
+  font-family: 'Caveat Brush', 'Alex Brush', cursive;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+html, body {
+    overflow-x: hidden ;
+    width: 100% ;
+    max-width: 100% ;
+}
+
+
+/* =========================
+       HERO
+========================= */
+.hero {
+    height: 100vh;
+    background: url('../img/fondo.gif') no-repeat center/cover;
+    margin-top: -100px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: #f2e9ff;
+}
+
+.hero-content {
+    margin-top: -320px;
+}
+
+/* =========================
+   HOJAS FLOTANTES
+========================= */
+.leaf {
+    position: absolute;
+    width: 150px;
+    opacity: 0; 
+    animation: floatLeaf 12s linear infinite;
+}
+
+/* Controlás horizontalmente  */
+.leaf-1 { left: 10%; animation-delay: 0s; }
+.leaf-2 { left: 45%; animation-delay: 6s; }
+.leaf-3 { left: 75%; animation-delay: 12s; }
+
+@keyframes floatLeaf {
+    0% {
+        opacity: 0;             
+        transform: translateY(-200px) rotate(0deg);
+    }
+
+    10% {
+        opacity: 1;             
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(900px) rotate(360deg);
+    }
+}
+
+/* =========================
+   TARJETAS
+========================= */
+.card-custom {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid #4c2a72;
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform .3s, box-shadow .3s;
+    color: #e5d8c8;
+}
+
+.card-custom:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   PAISAJE 
+========================= */
+.landscape {
+    background: url('../img/paisaje.jpg') no-repeat center/cover;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer-bg {
+    background: #2b094b;
+    padding: 30px 0;
+    color: #e5d8c8;
+}
+
+/* =========================
+       NAVBAR
+========================= */
+.custom-navbar {
+    background-color: rgba(22, 15, 30, 0.8); /* translúcido oscuro */
+    padding: 12px 0;
+    backdrop-filter: blur(6px);
+    border-bottom: 2px solid #4c2a72;
+    padding-left: 0;
+}
+
+/* LOGO */
+.navbar-brand {
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #e5d8c8 ;
+    margin-left: 0;
+    margin-right: 100px;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #e5d8c8 !important;
+    text-decoration: none !important;
+}
+
+
+
+/* LINKS PRINCIPALES */
+.navbar-nav .nav-link {
+    color: #c9bfd6;
+    transition: color .25s, transform .25s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #bd97ff;
+    transform: scale(1.12);       /* Se agranda suave */
+    text-decoration: none !important;
+}
+/* Quitar flecha */
+.no-arrow > .nav-link::after {
+    display: none;
+}
+
+/* =========================
+       SUBMENÚ OSCURO
+========================= */
+
+.nav-item.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    background-color: #2b094b;
+    border: none;
+    padding: 6px 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Items */
+.dropdown-menu .dropdown-item {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    color: #e5d8c8;
+    opacity: 0;
+    background: transparent;
+    transform: translateY(-8px);
+    transition: opacity .35s, transform .35s, background .18s;
+}
+
+/* Animación escalonada */
+.nav-item.dropdown:hover .dropdown-menu .dropdown-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu > li:nth-child(1) .dropdown-item { transition-delay: .05s; }
+.dropdown-menu > li:nth-child(2) .dropdown-item { transition-delay: .12s; }
+.dropdown-menu > li:nth-child(3) .dropdown-item { transition-delay: .19s; }
+.dropdown-menu > li:nth-child(4) .dropdown-item { transition-delay: .26s; }
+.dropdown-menu > li:nth-child(5) .dropdown-item { transition-delay: .33s; }
+
+/* Hover */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #4c2a72;
+    color: #ffffff;
+}
+
+.brand-totoro {
+    height: 80px;          /* ajusta la imagen a la altura del navbar */
+    width: auto;
+    object-fit: contain;
+}
+
+/* =========================
+      FOOTER LINKS
+========================= */
+.footer-links {
+    list-style: none;            /* Quita bullets */
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;                   /* separación entre links */
+}
+
+.footer-links a {
+    color: #e5d8c8;
+    font-family: 'M PLUS 1p', sans-serif;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.footer-links a:hover {
+    color: #bd97ff;              /* color violeta claro */
+    text-decoration: none;
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* ===============================
+   ESTILOS RESPONSIVOS (máx 991px)
+   =============================== */
+@media (max-width: 991px) {
+
+    /* ---------- Marca / Logo ---------- */
+
+    /* Tamaño del texto "Mundo Ghibli" */
+    .navbar-brand span {
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+
+    /* Tamaño del dibujo de Totoro */
+    .brand-totoro {
+        height: 50px;
+    }
+
+    /* Mantiene el brand en una sola línea
+       e impide que empuje al botón */
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        max-width: 70%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+
+    /* ---------- Contenedor del Navbar ---------- */
+
+    /* Hace que el navbar no rompa en 2 líneas */
+   
+
+    /* Ajuste fino del padding para evitar que 
+       los elementos se desplacen o salgan del área */
+    .navbar .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Centra los links del menú al abrirlo */
+    .navbar-collapse {
+        text-align: center;
+    }
+
+
+    /* ---------- Botón Hamburguesa ---------- */
+
+    /* Achica el botón y evita que empuje al brand */
+    .navbar-toggler {
+        padding: 1px 3px;
+        border-radius: 6px;
+        border: 1px solid transparent; /* invisible pero mantiene estructura */
+        margin-right: 10px;
+    }
+    /* Icono más pequeño y proporcional */
+    .navbar-toggler-icon {
+        width: 18px;
+        height: 18px;
+        background-size: 19px 19px;
+    }
+
+    .navbar-toggler:focus,
+    .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+
+    /* ---------- Elementos decorativos ---------- */
+
+    /* Oculta animaciones y elementos que molestan
+       en pantallas chicas */
+    .leaf-2, 
+    .leaf-3,
+    .cloud, 
+    .character-walk {
+        display: none;
+    }
+
+    /* Ajusta la única hoja visible */
+    .leaf-1 {
+        width: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-content {
+    margin-top: -150px;
+    }
+    body {
+        background-size: 100% 450px, cover; /* más alto para mobile */
+    }
+}
+
+
