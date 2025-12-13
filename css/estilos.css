@@ -93,6 +93,18 @@ html, body {
     transform: scale(1.12);
 }
 
+.brand-text {
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* necesario para el scale */
+}
+
+.navbar-brand:hover .brand-text {
+    color: #bd97ff;          /* violeta claro */
+    transform: scale(1.15); /* agranda suavemente */
+}
+
+
+
 /* =========================
        HERO
 ========================= */
