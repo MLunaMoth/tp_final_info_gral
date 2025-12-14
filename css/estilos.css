@@ -280,7 +280,7 @@ html, body {
     opacity: 0;
     background: transparent;
     transform: translateY(-8px);
-    transition: opacity .35s, transform .35s, background .18s;
+    transition: opacity .35s, transform .35s;
 }
 
 /* Animación escalonada */
@@ -288,12 +288,6 @@ html, body {
     opacity: 1;
     transform: translateY(0);
 }
-
-.dropdown-menu > li:nth-child(1) .dropdown-item { transition-delay: .05s; }
-.dropdown-menu > li:nth-child(2) .dropdown-item { transition-delay: .12s; }
-.dropdown-menu > li:nth-child(3) .dropdown-item { transition-delay: .19s; }
-.dropdown-menu > li:nth-child(4) .dropdown-item { transition-delay: .26s; }
-.dropdown-menu > li:nth-child(5) .dropdown-item { transition-delay: .33s; }
 
 /* Hover */
 .dropdown-menu .dropdown-item:hover {
@@ -391,8 +385,6 @@ html, body {
     left: 50%;
     width: 80px;
     transform: translateX(-50%);
-    filter: brightness(1.5);
-    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6);
 }
 
 .star {

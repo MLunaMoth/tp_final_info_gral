@@ -64,13 +64,13 @@ function createStar() {
         const starTop = starY;
         const starBottom = starTop + star.offsetHeight;
 
-        const COLLISION_MARGIN = 15; // margen extra para facilitar la colisión
+        const COLLISION_MARGIN = -5; // margen extra para facilitar la colisión
 
         // Colisión con margen
         if (
-            starBottom >= totoroTop - COLLISION_MARGIN &&
+            starBottom >= totoroTop + COLLISION_MARGIN &&
             starTop <= totoroBottom + COLLISION_MARGIN &&
-            starRight >= totoroLeft - COLLISION_MARGIN &&
+            starRight >= totoroLeft + COLLISION_MARGIN &&
             starLeft <= totoroRight + COLLISION_MARGIN
         ) {
             score++;
