@@ -78,7 +78,7 @@ function createStar() {
             star.remove();
             clearInterval(fall);
 
-            if (score >= 20) {
+            if (score >= 40) {
                 endGame(true);
             }
         }
@@ -87,7 +87,7 @@ function createStar() {
         // Tocó el suelo
         if (starY > gameArea.offsetHeight - star.offsetHeight) {
             lives--;
-            livesText.textContent = "Vidas: " + "❤️".repeat(lives);
+            livesText.textContent = "Vidas: " + "♡".repeat(lives);
             star.remove();
             clearInterval(fall);
 
@@ -106,7 +106,7 @@ function startGame() {
     lives = 3;
     totoroX = 260;
     scoreText.textContent = "Puntaje: 0";
-    livesText.textContent = "Vidas: ❤️❤️❤️";
+    livesText.textContent = "Vidas: ♡♡♡";
     gameOverText.textContent = " "
     gameOverDiv.style.display = "none";
     startBtn.disabled = true; // se desactiva al empezar

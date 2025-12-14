@@ -25,8 +25,8 @@ body {
         background:
         linear-gradient(
             to bottom,
-            #1a1623 0%,
-            #281dcc 100%
+            #281dcc 0%
+            #1a1623 100%,
         );
 
     background-color: #1a1623;
@@ -380,7 +380,7 @@ html, body {
     max-width: 600px;
     height: 400px;
     margin: 0 auto;
-    background: url("../img/fondo.png") center/cover;
+    background: url("../juego/img/fondo.jpg") center/cover;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -391,6 +391,8 @@ html, body {
     left: 50%;
     width: 80px;
     transform: translateX(-50%);
+    filter: brightness(1.5);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6);
 }
 
 .star {
@@ -399,16 +401,37 @@ html, body {
     width: 40px;
 }
 
+.game-page #game-area {
+    position: relative;  
+    z-index: 10;         
+}
 
+.game-page #totoro,
+.game-page .star {
+    position: absolute;
+    z-index: 20;
+}
 
 
 /* ===============================
-   ESTILOS RESPONSIVOS (máx 991px)
+   ESTILOS RESPONSIVOS
    =============================== */
+@media (max-width: 1300px) {
+    .navbar-brand {
+        max-width: 60%; 
+        margin-right: 20px;
+    }
+    .navbar-nav .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+
 @media (max-width: 991px) {
 
-    /* ---------- Marca / Logo ---------- */
-
+    /* ========================
+       MARCA / LOGO
+    ======================== */
     /* Tamaño del texto "Mundo Ghibli" */
     .navbar-brand span {
         font-size: 1.5rem;
@@ -420,8 +443,7 @@ html, body {
         height: 50px;
     }
 
-    /* Mantiene el brand en una sola línea
-       e impide que empuje al botón */
+    /* Mantiene el brand en una sola línea e impide que empuje al botón */
     .navbar-brand {
         display: flex;
         align-items: center;
@@ -430,14 +452,10 @@ html, body {
         white-space: nowrap;
     }
 
-
-    /* ---------- Contenedor del Navbar ---------- */
-
-    /* Hace que el navbar no rompa en 2 líneas */
-   
-
-    /* Ajuste fino del padding para evitar que 
-       los elementos se desplacen o salgan del área */
+    /* ========================
+       CONTENEDOR DEL NAVBAR
+    ======================== */
+    /* Ajuste fino del padding */
     .navbar .container-fluid {
         padding-left: 0;
         padding-right: 0;
@@ -448,16 +466,16 @@ html, body {
         text-align: center;
     }
 
-
-    /* ---------- Botón Hamburguesa ---------- */
-
-    /* Achica el botón y evita que empuje al brand */
+    /* ========================
+       BOTÓN HAMBURGUESA
+    ======================== */
     .navbar-toggler {
         padding: 1px 3px;
         border-radius: 6px;
-        border: 1px solid transparent; /* invisible pero mantiene estructura */
+        border: 1px solid transparent;
         margin-right: 10px;
     }
+
     /* Icono más pequeño y proporcional */
     .navbar-toggler-icon {
         width: 18px;
@@ -472,11 +490,10 @@ html, body {
         background-color: transparent;
     }
 
-
-    /* ---------- Elementos decorativos ---------- */
-
-    /* Oculta animaciones y elementos que molestan
-       en pantallas chicas */
+    /* ========================
+       ELEMENTOS DECORATIVOS
+    ======================== */
+    /* Oculta animaciones y elementos que molestan en pantallas chicas */
     .leaf-2, 
     .leaf-3,
     .cloud, 
@@ -492,11 +509,42 @@ html, body {
     }
 
     .hero-content {
-    margin-top: -150px;
+        margin-top: -150px;
     }
+
+    /* Ajusta fondo general */
     body {
-        background-size: 100% 450px, cover; /* más alto para mobile */
+        background-size: 100% 200px, cover;
+    }
+
+    /* ========================
+       SUBMENÚS
+    ======================== */
+    /* Hacer que los submenús estén siempre visibles y en flujo */
+    .navbar-nav .dropdown-menu {
+        display: block !important; /* siempre visible */
+        position: static;           /* ocupa espacio normal, no flotante */
+    }
+
+    /* Ajuste de los ítems de submenú */
+    .navbar-nav .dropdown-item {
+        opacity: 1;
+        transform: none;
+        font-size: 0.65rem; /* más pequeño */
+        padding: 8px 12px;
+    }
+
+    /* ========================
+       LINKS PRINCIPALES
+    ======================== */
+    /* Evitar cambio de color al tocar en móvil */
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus,
+    .navbar-nav .nav-link:active {
+        color: #e5d8c8; /* color beige de tu tema */
+        transform: none; /* quita zoom al tocar */
     }
 }
+
 
 
