@@ -335,6 +335,42 @@ html, body {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
+
+/*=============================
+          formulario
+  =============================*/
+ /* Estilo para inputs, textarea y select */
+.form-control-dark {
+    background-color: #1a1623; /* coincide con tu fondo principal */
+    color: #e5d8c8;            /* color del texto */
+    border: 1px solid #e2dbd3;
+    border-radius: 0.375rem;   /* mismo radio que tus cards */
+}
+
+.form-control-dark:focus {
+    background-color: #1a1623;
+    color: #e5d8c8;
+    border-color: #e5d8c8;
+    box-shadow: 0 0 0 0.25rem rgba(226, 219, 211, 0.25);
+}
+
+.btn-mi-color {
+    background-color: #e5d8c8;
+    color: #1a1623;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.btn-mi-color:hover {
+    background-color: #f0ebdf;
+    color: #1a1623;
+}
+
+/* Limitar el ancho del formulario */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+     
 /*=============================
          juego
     ==========================*/

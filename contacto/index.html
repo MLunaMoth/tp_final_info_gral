@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario| Mundo Ghibli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Kodchasan:wght@300;400;500;600;700&family=M+PLUS+1p:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+            <img src="../img/totoro.png" class="brand-totoro" alt="Totoro">
+            <span class="ms-2 watercolor brand-text">Mundo Ghibli</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarGhibli"
+                aria-controls="navbarGhibli"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarGhibli">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../historia-y-fundadores/index.html">Historia & Fundadores</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../historia-y-fundadores/origenes.html">Orígenes del estudio</a></li>
+                        <li><a class="dropdown-item" href="../historia-y-fundadores/fundadores.html">Perfiles de los creadores</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Filosofía & Estilo</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="temas-recurrentes.html">Temas recurrentes</a></li>
+                        <li><a class="dropdown-item" href="tecnicas-de-animacion.html">Técnicas de animación</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../cine-y-personajes/index.html">Cine & Personajes</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../cine-y-personajes/catalogo.html">Catálogo de películas</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../recomendaciones-y-guias/index.html">Recomendaciones & Guías</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../recomendaciones-y-guias/estado-de-animo.html">Por estado de ánimo</a></li>
+                        <li><a class="dropdown-item" href="../recomendaciones-y-guias/tematicas.html">Por Temática</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../analisis-y-contexto/index.html">Análisis & Contexto</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../analisis-y-contexto/mensajes-sociales.html">Mensajes sociales</a></li>
+                        <li><a class="dropdown-item" href="../analisis-y-contexto/legado-cultural.html">Legado cultural</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="../detras-de-escena/index.html">Detrás de Escena</a>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="../galeria/index.html">Galería de personajes</a></li>
+                <li class="nav-item"><a class="nav-link" href="../juego/index.html">Juego Interactivo</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<section class="hero1 d-flex align-items-start pt-5">
+    <div class="container text-center mt-5">
+        <h1 class="hero-title">Contactanos</h1>
+    </div>
+</section>
+
+         <!-- Formulario -->
+        <form class="needs-validation" novalidate method="POST" action="https://formspree.io/f/movgbwyl">
+
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+
+                    <!-- Nombre -->
+                    <div class="mb-3">
+                    <label for="name" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control form-control-dark" id="name" name="name" placeholder="Tu nombre" required>
+                    <div class="invalid-feedback">
+                        Por favor ingresa tu nombre.
+                    </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control form-control-dark" id="email" name="email" placeholder="ejemplo@mail.com" required>
+                    <div class="invalid-feedback">
+                        Por favor ingresa un correo válido.
+                    </div>
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="mb-3">
+                    <label for="message" class="form-label">Razón de contacto</label>
+                    <textarea class="form-control form-control-dark" id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <div class="invalid-feedback">
+                        Por favor escribe tu mensaje.
+                    </div>
+                    </div>
+
+                    <!-- Película favorita de Ghibli -->
+                    <div class="mb-3">
+                    <label for="favorite-movie" class="form-label">Película favorita de Ghibli</label>
+                    <select class="form-control form-control-dark" id="favorite-movie" name="favorite-movie" required>
+                        <option value="" disabled selected>Selecciona una película...</option>
+                        <option value="Totoro">Mi vecino Totoro</option>
+                        <option value="Spirited Away">El viaje de Chihiro</option>
+                        <option value="Princess Mononoke">La princesa Mononoke</option>
+                        <option value="Howl's Moving Castle">El castillo ambulante</option>
+                        <option value="Nausicaa">Nausicaä del Valle del Viento</option>
+                        <option value="Ponyo">Ponyo en el acantilado</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor selecciona una película favorita.
+                    </div>
+                    </div>
+
+                    <!-- Botón de envío -->
+                    <button type="submit" class="btn btn-mi-color">Enviar</button>
+
+                </div>
+                </div>
+            </div>
+
+        </form>
+
+
+<footer class="text-center mt-5 footer-bg">
+    <p>© 2025 Mundo Ghibli</p>
+</footer>
+<script src="validation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
