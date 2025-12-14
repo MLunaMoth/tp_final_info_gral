@@ -84,6 +84,17 @@
     </div>
 </nav>
 
+<!-- HERO -->
+<section class="hero1 d-flex align-items-start pt-5">
+    <div class="container text-center mt-5">
+        <h1 class="hero-title">Totoro y las estrellas del bosque</h1>
+        <p class="mt-3 fs-5">
+             Ayudá a Totoro a recolectar las estrellas antes de que
+            toquen el suelo. Tenés tres vidas.
+        </p>
+    </div>
+</section>
+
 <div class="container py-5 text-center">
 
     <div class="content-card mb-4">
@@ -99,12 +110,23 @@
         <span id="lives">Vidas: ❤️❤️❤️</span>
     </div>
 
+    <!-- Botón de empezar / reiniciar -->
+    <div class="mb-3">
+        <button id="start-btn" class="btn btn-mi-color">Empezar</button>
+    </div>
+
     <!-- ÁREA DEL JUEGO -->
-    <div id="game-area">
-        <img src="img/totoro.png" id="totoro">
+    <div id="game-area" class="position-relative">
+        <img src="img/totoro.png" id="totoro" class="position-absolute" style="bottom:0; left:260px;">
+        <!-- Cartel de fin de juego -->
+        <div id="game-over" class="position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+             style="top:0; left:0; background: rgba(0,0,0,0.7); color:white; font-size:2rem; display:none;">
+            <span id="game-over-text"></span>
+        </div>
     </div>
 
 </div>
+
 
 
 <footer class="text-center mt-5 footer-bg">

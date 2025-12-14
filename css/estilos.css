@@ -341,10 +341,10 @@ html, body {
   =============================*/
  /* Estilo para inputs, textarea y select */
 .form-control-dark {
-    background-color: #1a1623; /* coincide con tu fondo principal */
-    color: #e5d8c8;            /* color del texto */
+    background-color: #1a1623; 
+    color: #e5d8c8;            
     border: 1px solid #e2dbd3;
-    border-radius: 0.375rem;   /* mismo radio que tus cards */
+    border-radius: 0.375rem; 
 }
 
 .form-control-dark:focus {
@@ -366,7 +366,7 @@ html, body {
 }
 
 /* Limitar el ancho del formulario */
-.container {
+.containerform {
     max-width: 800px;
     margin: 0 auto;
 }
