@@ -335,6 +335,36 @@ html, body {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
+/*=============================
+         juego
+    ==========================*/
+#game-area {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    background: url("../img/fondo.png") center/cover;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#totoro {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 80px;
+    transform: translateX(-50%);
+}
+
+.star {
+    position: absolute;
+    top: -40px;
+    width: 40px;
+}
+
+
+
 
 /* ===============================
    ESTILOS RESPONSIVOS (máx 991px)
